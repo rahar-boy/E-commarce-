@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;  
+}
+body {
+    background-color: #eeee;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeee;
+    padding: 20px;
+    box-shadow: 0px 2px 2px 2px rgb(158, 156, 156);
+}
+nav .logo {
+    margin-left: 70px;
+    font-size: 25px;
+}
+nav ul li{
+    margin-right: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+ul li a {
+    margin-inline: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+ul li #home{
+    color: rgb(82, 127, 127);
+}
+ul li a:hover{
+    border-bottom: 4px solid black;
+    cursor: pointer;
+}
+ul li i:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+
+
+.menu-icon {
+    display: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    body{
+        width: 100%;
+    }
+    nav ul {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        padding: 20px;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        flex-direction: column;
+    }
+    nav.active ul {
+        display: flex; /* Show the menu links */
+    }
+}
+
+/* main start  */
+
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.main .mainText{
+    margin-top: 130px;
+}
+.mainText h1 {
+    font-size: 70px;
+}
+.mainText h2 {
+    font-size: 50px;
+}
+.mainText .top{
+    color: rgb(17, 125, 125);
+}
+.mainText button{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(5, 142, 142);
+    color: white;
+    font-size: 22px;
+    border: none;
+    margin-top: 24px;
+}
+.mainText p{
+    margin-top: 12px;
+}
+.mainText button:hover{
+    border: 3px solid rgb(4, 132, 132);
+    background-color: transparent;
+    color: rgb(3, 104, 104);
+}
+
+
+
+/* main stop  */
+
+.trand .head{
+    text-align: center;
+    padding: 35px;
+    margin-top: 25px;
+}
+.head span{
+    color: rgb(2, 168, 168);
+}
+/* Card Container */
+.card {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+/* Individual Card */
+.crd {
+    background-color: #eeee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 23px;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.crd:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.crd img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Title Styling */
+.crd h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Star Icon Styling */
+.crd .fa-star {
+    color: green;
+    margin: 2px 2px;
+}
+
+/* Button Styling */
+.crd button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 2px;
+    margin-top: 5px;
+}
+
+.crd button:hover {
+    background-color: #218838;
+}
+
+/* blog start  */
+/* Main Blog Section */
+/* Main Blog Section */
+.trands {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Blog Section Header */
+.trands .head h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+}
+
+.trands .head h1 span {
+    color: #28a745; /* Different color for the "Blog" text */
+}
+
+/* Card Container */
+.card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Blog Image */
+.blog img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Blog Text */
+.blogText {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.blogText h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blogText p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Read More Link */
+.blogText a {
+    display: inline-block;
+    color: #28a745;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 2px solid #28a745;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.blogText a:hover {
+    color: #218838;
+    border-bottom-color: #218838;
+}
+
+
+
+/* latter start  */
+.latter{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(4, 4, 78);
+    color: white;
+    padding: 50px;
+}
+.inp{
+    display: flex;
+}
+.inp input{
+    font-size: 20px;
+    width: 350px;
+    height: 35px;
+    outline: none;
+    border: none;
+}
+.inp button{
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: rgb(6, 152, 152);
+    color: white;
+}
+.inp button:hover{
+    width: 120px;
+    height: 37px;
+    transition: transform 0.3s;
+}
+
+
+/* footer start  */
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 90px;
+}
+.footer .footerText{
+    margin-inline: 90px;
+}
+.footerText {
+    margin-top: 11px;
+}
+.footerText p {
+    margin-top: 20px;
+}
+
+
+
+/* aboutus start */
+.about{
+    display: none;
+}
+.aboutus{
+    background-color: rgb(8, 8, 166);
+    color: white;
+    padding: 30px;
+    font-size: 25px;
+
+}
+.me{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    background-color: white;
+    padding: 30px;
+    margin-left: 28%;
+    margin-top: 10px;
+}
+.me img {
+    width: 44%;
+}
+
+/* contactus start  */
+.contact{
+    display: none;
+}
+.contactus {
+    background-color: rgb(8, 8, 166);
+    color: white;
+    padding: 30px;
+    font-size: 19px;
+
+}
+.contactme {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin-top: 5%;
+    margin-left: 10%;
+    background-color: white;
+}
+.contactme img {
+    width: 55%;
+}
+.contactText{
+    padding: 22px;
+    width: 600px;
+}
+.contactText p {
+    margin-top: 10px;
+}
+
+.from{
+    text-align: center;
+    margin-top: 5%;
+}
+.from input {
+    width: 300px;
+    height: 33px;
+    margin-top: 12px;
+    padding: 5px;
+}
+.from button {
+    width: 300px;
+    height: 30px;
+    background-color: rgb(3, 104, 104);
+    color: white;
+    font-size: 22px;
+    border: none;
+    margin-top: 5px;
+}
+
+/* contact us end  */
+
+
+/* single card start  */
+.cart{
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+.cart img{
+    width: 600px;
+    height: 500px;
+}
+.carttext{
+    padding: 25px;
+    margin-top: 25px;
+}
+.carttext h2{
+    margin-top: 18px;
+}
+.carttext p{
+    margin-top: 15px;
+}
+.carttext button{
+    width: 140px;
+    height: 45px;
+    background-color: rgba(177, 53, 8, 0.888);
+    color: white;
+    border: none;
+    font-size: 22px;
+    margin-top: 12px;
+}
+
+/* single card stop  */
